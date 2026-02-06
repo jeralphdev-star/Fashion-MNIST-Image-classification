@@ -5,7 +5,8 @@
 # Questions:
 ### 1. What is the Fashion MNIST dataset?
   
-##The Fashion MNIST dataset contains 70,000 grayscale images of clothing items, which you can found in step 1.3 Training data shape: (60000, 28, 28)
+answer:
+The Fashion MNIST dataset contains 70,000 grayscale images of clothing items, which you can found in step 1.3 Training data shape: (60000, 28, 28)
 Testing data shape: (10000, 28, 28) which the training images is 60,000  and 10, 000 for test images with the dimension of 28x28 pixels each. It includes 10 difference clothing categories such as T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, and Ankle boot which will be see in step 1.4 class_names = [
 'T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat',
 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot'
@@ -15,12 +16,14 @@ plt.colorbar()  # Shows values from 0-255 (grayscale)
 
 ### 2. Why do we normalize image pixel values before training?
 
-##We normalize the image pixel values by dividing them by 255 to convert the range from 0-255 to 0-1. We can see that process in step 2.1 Normalize the Data
+answer:
+We normalize the image pixel values by dividing them by 255 to convert the range from 0-255 to 0-1. We can see that process in step 2.1 Normalize the Data
 train_images = train_images / 255.0 test_images = test_images / 255.0 This is done to avoid overflow caused by large numbers, speed up training, and help the neural network learn more efficiently.
 
 ### 3. List the layers used in the neural network and their functions.
 
-##We can see in the step 2.2 
+amswer:
+We can see in the step 2.2 
 from tensorflow.keras import layers
 model = keras.Sequential([
 layers.Flatten(input_shape=(28, 28)),
@@ -57,7 +60,8 @@ Last is the dense ouput layer it has 10 neurons that based on the input vlaue in
 
 ### 4. What does an epoch mean in model training?
 
-##An epoch mean ONE complete pass through the ENTIRE training dataset.
+answer:
+An epoch mean ONE complete pass through the ENTIRE training dataset.
 we can see that in the  step 2.4 train the model, this code have 10 epoch, then have 1875 batches each epoch, the number of batches results to 60,000 training data shape images divides to 32 the default batch size. Each epoch process 1875 batches 60,000 images that well see in the output that also show the time of process, accuracy and loss percentage
 
 history = model.fit(train_images, train_labels, epochs=10) 
@@ -80,7 +84,8 @@ Epoch 7/10
 
 ### 5. Compare the predicted label and actual label for the first test image.
 
-##From Step 2.6, the model's predicted label for the first test image is 9, and the actual label is also 9. According to the class names list from Step 1.4, label 9 corresponds to 'Ankle boot'. Since both the predicted and actual labels match, the model correctly classified the first test image as an ankle boot. This demonstrates that the neural network successfully learned to recognize this particular clothing item.
+answer:
+From Step 2.6, the model's predicted label for the first test image is 9, and the actual label is also 9. According to the class names list from Step 1.4, label 9 corresponds to 'Ankle boot'. Since both the predicted and actual labels match, the model correctly classified the first test image as an ankle boot. This demonstrates that the neural network successfully learned to recognize this particular clothing item.
 
 step 2.6
 input code
@@ -108,7 +113,8 @@ count it from 0 to 9, the numebr 9 is Ankle boot
 
 ### 6. What could be done to improve the model’s accuracy?
 
-##The baseline model achieved 87.56% accuracy. My Task Enhancements showed several improvements:
+answer:
+The baseline model achieved 87.56% accuracy. My Task Enhancements showed several improvements:
 
 50 epochs → 88.95% accuracy (best result) - shown in the task enhancement 2
 256 neurons → 88.30% accuracy - shown in the task enhancement 1
