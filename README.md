@@ -108,20 +108,17 @@ count it from 0 to 9, the numebr 9 is Ankle boot
 
 ### 6. What could be done to improve the model’s accuracy?
 
-##In the original model has 128 neurons in the step 2.5 the accuracy result to 0.8756999969482422 (87.56%)
+##The baseline model achieved 87.56% accuracy. My Task Enhancements showed several improvements:
 
-step 2.5
-test_loss, test_acc = model.evaluate(test_images, test_labels, verbose=2)
-print("\nTest accuracy:", test_acc)
+50 epochs → 88.95% accuracy (best result) - shown in the task enhancement 2
+256 neurons → 88.30% accuracy - shown in the task enhancement 1
+2 hidden layers → 88.16% accuracy - shown in the task enhancement 3
 
-output 
-313/313 - 0s - 1ms/step - accuracy: 0.8757 - loss: 0.3541
+Additional methods to further improve accuracy include:
 
-Test accuracy: 0.8756999969482422
-
-In the task enhancement 1 the accuracy is a little higher results to 0.8830999732017517 (88.30%) with 256 neurons.
-
-in the task enhancement 2 the test accuracy with 50 epochs: 0.8895000219345093 (88.95%)
-
-in the task enhancement 3 the test accuracy with 2 hidden layers: 0.8816999793052673 (88.16%)
+Using CNN layers (better for image recognition)
+Adding Dropout layers (prevents overfitting)
+Implementing data augmentation (more training variety)
+Combining multiple enhancements (e.g., 256 neurons + 50 epochs + dropout)
+Trying different optimizers or learning rates
 
